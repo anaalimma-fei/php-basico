@@ -1,9 +1,9 @@
 <?php
 //Conecta ao banco de dados 
 $servername = "localhost";
-$username = "root"
-$password = "Senai@118"
-$dbname ="exercicio"
+$username = "root";
+$password = "Senai@118";
+$dbname ="exercicio";
 
 $conn = new mysqli($servername, $username,
 $password, $dbname);
@@ -23,9 +23,9 @@ if ($result->num_rows > 0){
     echo "<tr><th>ID</th><th>Nome</th><th>Email</th></tr>";
     while ($row = $result->fetch_assoc()){
         echo "<tr>";
-        echo "<td>" . $row['id'] . "</td>"
-        echo "<td>" . $row['nome'] . "</td>"
-        echo "<td>" . $row['email'] . "</td>"
+        echo "<td>" . $row['id'] . "</td>";
+        echo "<td>" . $row['nome'] . "</td>";
+        echo "<td>" . $row['email'] . "</td>";
         echo "</tr>";
     }
     echo "</table>";
