@@ -13,12 +13,12 @@ if ($conn->connect_error){
     die("Falha na conexão: " . $conn->connect_error);
 }
 
-// Consulta para buscar todos os clientes da tabela 
-$sql = "SELECTE id, nome, email FROM clientes";
+// Consulta e busca todos os clientes da tabela
+$sql = "SELECT id, nome, email FROM clientes";
 $result = $conn->query($sql);
 
-//Verifica se existem registros e os exibe em formato de tabela 
-if ($result->num_rows > 0){
+// Verifica se existem registros e os exibe em formato de tabela
+if ($result->num_rows > 0) {
     echo "<table border='1'>";
     echo "<tr><th>ID</th><th>Nome</th><th>Email</th></tr>";
     while ($row = $result->fetch_assoc()){
